@@ -12,19 +12,19 @@ import java.util.concurrent.TimeUnit;
 public class Otchetys {
     public static void main(String[] args) throws InterruptedException{
 
-        System.setProperty("webdriver.chrome.driver", "C:\\chromedriver_win32\\chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", "//");
         ChromeDriver driver = new ChromeDriver();
 
         JavascriptExecutor executor = (JavascriptExecutor)driver;
         WebDriverWait wait = new WebDriverWait(driver, 20);
 
 
-        driver.get("https://test5.agrosignal.com/");  // говорим драйверу перейди на указанный сайт
+        driver.get("//");  // говорим драйверу перейди на указанный сайт
         driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);  //ожидаем пока сайт прогрузится, 10 сек
 
         // жмякаем на кнопку "ОК" (Требуется вход в систему) при входе на сайт
-        driver.findElement(By.id("textfield-1009-inputEl")).sendKeys("infobis");        // Логин
-        driver.findElement(By.id("textfield-1010-inputEl")).sendKeys("18tofodola");     // Пароль
+        driver.findElement(By.id("textfield-1009-inputEl")).sendKeys("//");        // Логин
+        driver.findElement(By.id("textfield-1010-inputEl")).sendKeys("//");     // Пароль
 
 
         WebElement Vhod = driver.findElement(By.xpath(".//span[@class='x-btn-icon-el  '][@id='button-1014-btnIconEl']"));
